@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: black;
+    animation: transitionIn 0.75s;
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    margin: 0;
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-weight: bold;
+}
+
+.top {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    box-shadow: 0px 1px 6px blue,
+        0px 3px 18px blue;
+    padding: 0.3em 1em;
+    animation-name: myanimation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.top a {
+    text-decoration: none;
+}
+
+@keyframes myanimation {
+
+    0% {
+        box-shadow: 0px 1px 6px blue,
+            0px 3px 18px blue;
+    }
+
+    25% {
+        box-shadow: 0px 1px 6px blue,
+            0px 3px 18px red;
+    }
+
+    50% {
+        box-shadow: 0px 1px 6px blue,
+            0px 3px 18px yellow;
+    }
+
+    75% {
+        box-shadow: 0px 1px 6px blue,
+            0px 3px 18px green;
+    }
+
+    100% {
+        box-shadow: 0px 1px 6px blue,
+            0px 3px 18px purple;
+    }
+
+}
+
+.top h3 {
+    margin: 10px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+}
+
+
+.top img {
+    width: 60px;
+    height: 60px;
+}
+
+.photoprincipale img {
+    padding-top: 5%;
+    padding-left: 5%;
+}
+
+.button {
+    display: flex;
+    flex-direction: row;
+    gap: 5em;
+    padding: 15px;
+    margin: 15px;
+}
+
+
+.button svg {
+    background-color: black;
+    fill: white;
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+
+.button svg:hover {
+    fill: rgb(242, 165, 165);
+}
+
+
+.lastbutton svg {
+    background-color: black;
+    fill: white;
+    transition: all 200ms ease;
+
+}
+
+.lastbutton svg:hover {
+    fill: rgb(242, 165, 165);
+}
+
+
+.lastbutton a {
+    color: white;
+    text-decoration: none;
+}
+
+
+.lastbutton ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+.lastbutton strong {
+    font-weight: 50;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    gap: .5em
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    gap: .5em
+}
+
+
+main {
+    gap: 10em;
+    margin: 3em auto;
+    max-width: 1100px;
+    max-height: 110px;
+    justify-content: space-between;
+}
+
+.svg-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+}
+
+.small {
+    font-size: .6em;
+    font-weight: bold;
+    opacity: .8;
+}
+
+.no-gap {
+    gap: 0;
+}
+
+
+
+li {
+    position: relative;
+
+}
+
+li::after {
+    color: white;
+    content: '>';
+    position: absolute;
+    font-size: 2.6em;
+    font-weight: bold;
+    right: -1.2em;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 250ms ease;
+}
+
+li:hover::after {
+    right: -1.6em;
+}
+
+
+
+/* Responsive */
+
+@media only screen and (max-width:800px) and (min-width:200px) {
+
+    .top {
+
+        box-shadow: 0px 1px 6px rgb(204, 238, 255),
+            0px 3px 18px rgb(232, 236, 3);
+
+        animation: blink 2s linear infinite;
+
+    }
+
+
+    .photoprincipale img {
+        padding-top: 2%;
+        padding-left: 2%;
+        width: 90%;
+        height: 100%;
+    }
+
+    .button {
+        gap: 2em;
+        margin: 10px;
+        padding: 10px;
+    }
+
+
+    .lastbutton ul {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 30em;
+        left: -25em;
+        gap: 2em;
+
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 3em;
+        padding: 5%;
+
+
+    }
+
+
+}
+
+@media only screen and (max-width: 1240px) and (min-width:800) {
+
+
+    .buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 3em;
+        padding: 5%;
+
+
+    }
+
+}
+
+
+
+
+/* Deuxième page - Ventilation */
+
+
+
+
+
+.photosecondaire img {
+    width: 80%;
+    height: 80%;
+    padding-left: 15%;
+}
+
+/* STYLE DES 3 BOUTONS */
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6em;
+    padding: 15%;
+}
+
+
+.buttons svg {
+    background-color: black;
+    fill: white;
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+
+.buttons svg:hover {
+    fill: rgb(241, 2, 2);
+}
+
+
+.contaitner {
+    width: 120px;
+    height: 120px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    cursor: pointer;
+}
+
+.tempContaitner {
+    font-size: 55px;
+    position: relative;
+}
+
+.degree {
+    position: absolute;
+}
+
+.units {
+    font-size: 24px;
+}
